@@ -215,6 +215,8 @@ td.c{text-align:center}
 .plan.featured .price .amt{color:var(--amber)}
 .price .per{color:var(--steel);font-size:.9em}
 .setup{font-size:.82em;color:var(--ice);margin-bottom:.6em;padding-bottom:.6em;border-bottom:1px solid var(--line)}
+.strike{color:var(--steel);text-decoration-thickness:2px}
+.bonif{color:var(--amber);font-weight:700}
 .value{margin-top:auto;padding-top:.8em;font-size:.86em;font-weight:600;color:var(--amber)}
 
 /* Chrome */
@@ -315,7 +317,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
   <div class="gate-card">
     <p class="gate-kicker">Documento privado</p>
     <h1 id="gateTitle">Acceso restringido</h1>
-    <p class="gate-sub">Esta presentación es de circulación limitada. Ingresá el PIN que recibiste para verla.</p>
+    <p class="gate-sub">Preparamos esta propuesta especialmente para el equipo de Grupo Arvor. Ingresá el PIN que te compartimos para verla.</p>
     <form id="gateForm" autocomplete="off">
       <input id="gatePin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="8"
              autocomplete="off" aria-label="PIN de acceso" placeholder="••••">
@@ -950,7 +952,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
       <div class="panel plan"><h3>Modalidad esencial</h3>
         <p class="small muted">Pieza madre y herramientas</p>
         <div class="price"><span class="amt">$2.000.000</span><span class="per">por mes</span></div>
-        <p class="setup">Setup inicial: $1.250.000 (pago único)</p>
+        <p class="setup">Setup inicial: $1.150.000 (pago único)</p>
         <ul class="clean small">
           <li>Estrategia completa: arquitectura de marca, lineamientos y planes por marca</li>
           <li>2 episodios por mes con nuestro equipo técnico</li>
@@ -962,7 +964,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
       <div class="panel amber plan featured"><div class="badge">Recomendada</div><h3>Modalidad completa</h3>
         <p class="small muted">Pieza madre y 12 piezas listas por episodio</p>
         <div class="price"><span class="amt">$3.200.000</span><span class="per">por mes</span></div>
-        <p class="setup">Setup inicial: $600.000 (pago único) · $650.000 menos que la esencial</p>
+        <p class="setup">Setup inicial: <s class="strike">$600.000</s> <strong class="bonif">Bonificado</strong></p>
         <ul class="clean small">
           <li>Todo lo de la esencial: nosotros editamos, su equipo no necesita herramientas ni capacitación</li>
           <li>8 clips por mes con subtítulos y copy, para Reels y Shorts</li>
