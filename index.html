@@ -218,6 +218,7 @@ td.c{text-align:center}
 .strike{color:var(--steel);text-decoration-thickness:2px}
 .bonif{color:var(--amber);font-weight:700}
 .value{margin-top:auto;padding-top:.8em;font-size:.86em;font-weight:600;color:var(--amber)}
+.value strong{color:inherit}
 
 /* Chrome */
 .bar{position:fixed;left:0;right:0;top:0;height:3px;background:rgba(255,255,255,.06);z-index:5}
@@ -379,7 +380,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
     <img class="logo" src="data:image/png;base64,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" alt="Grupo Arvor">
     <div class="mark">Propuesta de estrategia y contenido</div>
     <h1>Nueve marcas<br>que la región ya conoce.<br>Un nombre que<br>ahora las une.</h1>
-    <p class="lead" style="margin-top:1.4em;max-width:52ch">Estrategia de posicionamiento y contenido multicanal para Grupo Arvor y sus 9 marcas. Un podcast propio como motor, una arquitectura que une todo, y un flujo de trabajo para que el equipo lo sostenga.</p>
+    <p class="lead" style="margin-top:1.4em;max-width:52ch">Estrategia de posicionamiento y contenido multicanal para Grupo Arvor y sus 9 marcas. <strong>Un podcast propio como motor</strong>, una arquitectura que une todo, y un flujo de trabajo para que el equipo lo sostenga.</p>
     <div class="meta">
       <div>Septiembre 2026<small>Propuesta v1</small></div>
       <div>Mauricio Sawicki y equipo<small>Estrategia y producción del podcast</small></div>
@@ -393,7 +394,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
   <div>
     <div class="kicker">El punto de partida</div>
     <h2>Un nombre nuevo para una historia de 40 años.</h2>
-    <p class="lead">Iruña, Autonet o Credinet tienen décadas en la calle. Grupo Arvor es el nombre que acaba de reunirlas. El trabajo ahora es que la región conozca ese nombre y lo asocie a cada una de sus marcas.</p>
+    <p class="lead">Iruña, Autonet o Credinet tienen décadas en la calle. Grupo Arvor es el nombre que acaba de reunirlas. El trabajo ahora es <strong>que la región conozca ese nombre y lo asocie a cada una de sus marcas</strong>.</p>
   </div>
   <div>
     <div class="grid2">
@@ -412,7 +413,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
     </div>
     <div class="panel amber" style="margin-top:1.2em">
       <h3>La oportunidad</h3>
-      <p>Un holding patagónico con concesionarias, financiera, logística en Vaca Muerta y servicios petroleros tiene adentro las historias que la región quiere escuchar. El material ya está: lo que proponemos es un sistema que lo convierta en contenido y una firma común que lo identifique como Arvor.</p>
+      <p>Un holding patagónico con concesionarias, financiera, logística en Vaca Muerta y servicios petroleros tiene adentro las historias que la región quiere escuchar. <strong>El material ya está</strong>: lo que proponemos es un sistema que lo convierta en contenido y una firma común que lo identifique como Arvor.</p>
     </div>
   </div>
 </section>
@@ -445,7 +446,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
     </div>
     <div class="panel amber" style="grid-column:1/-1">
       <h3>Lo que sumamos</h3>
-      <p class="small">Un motor de contenido (el podcast), una arquitectura que firma cada pieza como Arvor, planes por marca con formatos repetibles, y un flujo de trabajo con herramientas y plantillas para que el equipo lo ejecute sin depender de una agencia.</p>
+      <p class="small">Un motor de contenido (el podcast), una arquitectura que firma cada pieza como Arvor, planes por marca con formatos repetibles, y un flujo de trabajo con herramientas y plantillas para que el equipo lo ejecute <strong>sin depender de una agencia</strong>.</p>
     </div>
   </div>
 </section>
@@ -455,7 +456,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
   <div>
     <div class="kicker">Qué queremos lograr</div>
     <h2>Cada marca es una puerta.<br>Arvor es la casa.</h2>
-    <p class="lead">Que en 12 meses cualquier cliente de cualquiera de las 9 marcas sepa que está tratando con Grupo Arvor, y que ese nombre le sume confianza.</p>
+    <p class="lead">Que en 12 meses cualquier cliente de cualquiera de las 9 marcas <strong>sepa que está tratando con Grupo Arvor</strong>, y que ese nombre le sume confianza.</p>
   </div>
   <div>
     <h3>Tres objetivos medibles</h3>
@@ -466,7 +467,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
     </ol>
     <div class="panel amber" style="margin-top:1.2em">
       <h3>Principio rector</h3>
-      <p>Humano antes que institucional. El grupo no habla en tercera persona: hablan las personas que lo forman. Ese es el tono que hizo funcionar a La Fábrica, y es el que Arvor puede sostener porque ya tiene a quienes lo cuenten.</p>
+      <p><strong>Humano antes que institucional.</strong> El grupo no habla en tercera persona: hablan las personas que lo forman. Ese es el tono que hizo funcionar a La Fábrica, y es el que Arvor puede sostener porque ya tiene a quienes lo cuenten.</p>
     </div>
   </div>
 </section>
@@ -476,7 +477,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
   <div>
     <div class="kicker">Cómo conviven el grupo y las marcas</div>
     <h2>Modelo de respaldo visible.</h2>
-    <p class="lead">Ninguna marca pierde su identidad. Todas ganan una firma común: "Una empresa de Grupo Arvor". El sello aparece siempre, en el mismo lugar, con la misma forma.</p>
+    <p class="lead"><strong>Ninguna marca pierde su identidad.</strong> Todas ganan una firma común: <strong>"Una empresa de Grupo Arvor"</strong>. El sello aparece siempre, en el mismo lugar, con la misma forma.</p>
   </div>
   <div>
     <div class="grid2">
@@ -512,12 +513,12 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
   <div>
     <div class="kicker">El contenido principal</div>
     <h2>Un podcast donde la gente de Arvor cuenta su historia.</h2>
-    <p class="lead">Un episodio largo genera contenido para todos los canales durante dos semanas. Es el activo que más rinde por hora producida.</p>
+    <p class="lead">Un episodio largo genera <strong>contenido para todos los canales durante dos semanas</strong>. Es el activo que más rinde por hora producida.</p>
   </div>
   <div>
     <div class="panel">
       <h3>La referencia: La Fábrica Podcast</h3>
-      <p class="small">Nació de seis jóvenes industriales que querían contar la Argentina que produce. No hacen entrevistas: tienen conversaciones. No traen invitados: cuentan historias. Llegó al primer puesto de Spotify Argentina y hoy es una productora con sponsors, eventos y podcasts derivados por sector.</p>
+      <p class="small">Nació de seis jóvenes industriales que querían contar la Argentina que produce. No hacen entrevistas: tienen conversaciones. No traen invitados: cuentan historias. Llegó al <strong>primer puesto de Spotify Argentina</strong> y hoy es una productora con sponsors, eventos y podcasts derivados por sector.</p>
       <div class="grid4" style="margin-top:.9em">
         <div class="stat" style="grid-template-columns:1fr"><b>271k</b><span class="small muted">Instagram</span></div>
         <div class="stat" style="grid-template-columns:1fr"><b>86k</b><span class="small muted">YouTube</span></div>
@@ -528,7 +529,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
     </div>
     <div class="panel amber" style="margin-top:1.2em">
       <h3>La lección del CEO de YPF</h3>
-      <p class="small">Horacio Marín fue dos veces a La Fábrica en dos meses. Lo que se viralizó no fueron los barriles de Vaca Muerta: fue la infancia con una letrina en el patio, el sueño de jugar Wimbledon, la abuela, y frases de liderazgo como "los jefes dicen el qué y el cuándo; vos hacés el cómo". A un CEO se lo convence mostrándole eso: que va a hablar de él, no de resultados trimestrales.</p>
+      <p class="small">Horacio Marín fue dos veces a La Fábrica en dos meses. Lo que se viralizó no fueron los barriles de Vaca Muerta: fue la infancia con una letrina en el patio, el sueño de jugar Wimbledon, la abuela, y frases de liderazgo como "los jefes dicen el qué y el cuándo; vos hacés el cómo". A un CEO se lo convence mostrándole eso: que <strong>va a hablar de él, no de resultados trimestrales</strong>.</p>
     </div>
   </div>
 </section>
@@ -558,9 +559,9 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
       <li><strong>Consejo (5 min).</strong> Qué le diría a alguien que empieza. Cierre con el sello Arvor.</li>
     </ol>
     <div class="grid3" style="margin-top:1.2em">
-      <div class="panel"><h3>Frecuencia</h3><p class="small">Arrancamos con 2 episodios completos por mes, grabados en una misma jornada. Cuando el equipo esté alineado y el flujo ajustado, pasamos a 1 por semana.</p></div>
-      <div class="panel"><h3>Conducción</h3><p class="small">Una persona toma las riendas como conductor fijo, y dos más se preparan como backup para el mismo rol. Así el programa no depende de una agenda.</p></div>
-      <div class="panel"><h3>Set</h3><p class="small">Escenografía a cargo de Grupo Arvor, en su espacio. Nosotros aportamos todo el equipo técnico de producción, detallado en la slide siguiente.</p></div>
+      <div class="panel"><h3>Frecuencia</h3><p class="small">Arrancamos con <strong>2 episodios completos por mes</strong>, grabados en una misma jornada. Cuando el equipo esté alineado y el flujo ajustado, pasamos a 1 por semana.</p></div>
+      <div class="panel"><h3>Conducción</h3><p class="small">Una persona toma las riendas como conductor fijo, y dos más se preparan como backup para el mismo rol. Así <strong>el programa no depende de una agenda</strong>.</p></div>
+      <div class="panel"><h3>Set</h3><p class="small">Escenografía a cargo de Grupo Arvor, en su espacio. <strong>Nosotros aportamos todo el equipo técnico de producción</strong>, detallado en la slide siguiente.</p></div>
     </div>
   </div>
 </section>
@@ -598,7 +599,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
         <ul class="clean small">
           <li>Monitoreo de video y audio durante la grabación</li>
           <li>Tethering a Mac: revisamos encuadre y foco en pantalla grande antes de grabar</li>
-          <li>Se detectan problemas en el set, no en la edición</li>
+          <li><strong>Se detectan problemas en el set, no en la edición</strong></li>
         </ul>
       </div>
       <div class="panel">
@@ -627,7 +628,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
     <p class="lead">El CEO da el peso institucional del lanzamiento. Después el protagonismo se reparte entre gerentes, vendedores y técnicos: ahí está la cercanía que hace que la gente lo comparta.</p>
     <div class="panel amber" style="margin-top:1.2em">
       <h3>Regla de casting</h3>
-      <p class="small">Elegimos por historia, no por cargo. Un vendedor con 25 años en Autonet o un operador de Oil Bull en el yacimiento pueden ser los episodios más vistos de la temporada.</p>
+      <p class="small"><strong>Elegimos por historia, no por cargo.</strong> Un vendedor con 25 años en Autonet o un operador de Oil Bull en el yacimiento pueden ser los episodios más vistos de la temporada.</p>
     </div>
   </div>
   <div class="scroll">
@@ -667,7 +668,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
         <div class="dgroup"><div class="dg-title">Un derivado por canal</div><div class="dcards four"><div class="dc sp"><div class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M7 10c3-1.2 7-1.2 10 .5M8 13c2.5-1 5.5-1 8 .4M9 16c2-.7 4-.7 6 .3"/></svg></div><div class="dc-plat">Spotify</div><div class="dc-t">Episodio en audio</div><div class="dc-s">Nuevo canal del grupo</div></div><div class="dc li"><div class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 12h18"/></svg></div><div class="dc-plat">LinkedIn</div><div class="dc-t">Esta semana en Arvor</div><div class="dc-s">Clip + reflexión del invitado</div></div><div class="dc nl"><div class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div class="dc-plat">Newsletter</div><div class="dc-t">Esta semana en Arvor</div><div class="dc-s">Formateado y listo para enviar</div></div><div class="dc bl"><div class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg></div><div class="dc-plat">Blog grupoarvor.com.ar</div><div class="dc-t">Nota del episodio</div><div class="dc-s">Publicada por nosotros, con palabras clave</div></div></div></div>
       </div>
     </div>
-    <p class="small muted" style="margin-top:1em">Los mismos 4 clips se publican en Instagram y en YouTube. En la modalidad completa entregamos las 12 piezas listas en Drive: el equipo de Arvor aprueba y publica.</p>
+    <p class="small muted" style="margin-top:1em">Los mismos 4 clips se publican en Instagram y en YouTube. En la modalidad completa <strong>entregamos las 12 piezas listas en Drive</strong>: el equipo de Arvor aprueba y publica.</p>
   </div>
 </section>
 
@@ -676,17 +677,17 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
   <div>
     <div class="kicker">Qué publica Grupo Arvor</div>
     <h2>Cuatro pilares y los momentos que los alimentan.</h2>
-    <p class="lead">El feed del grupo no repite las ofertas de las marcas. Cuenta lo que ninguna marca puede contar sola: su gente, su región y sus momentos.</p>
+    <p class="lead">El feed del grupo no repite las ofertas de las marcas. Cuenta <strong>lo que ninguna marca puede contar sola</strong>: su gente, su región y sus momentos.</p>
     <div class="panel" style="margin-top:1.2em"><h3>Eventos como fuente de contenido</h3>
       <ul class="clean small">
         <li><strong>FamilyDay, 31 de octubre.</strong> Día de la familia para colaboradores. Momentos auténticos, de uso interno y externo: es el pilar de cultura en su forma más natural.</li>
         <li><strong>Eventos institucionales.</strong> Presentaciones de vehículos nuevos de Volkswagen, Amarok Experto y lanzamientos de cada marca. Ocasionales, pero muy rendidores.</li>
       </ul>
-      <p class="small muted" style="margin-top:.6em">Recomendación: cubrirlos con el mismo flujo de derivados. La cobertura no está incluida en esta propuesta; se cotiza aparte si el equipo quiere que la hagamos nosotros.</p>
+      <p class="small muted" style="margin-top:.6em">Recomendación: cubrirlos con el mismo flujo de derivados. <strong>La cobertura no está incluida en esta propuesta</strong>; se cotiza aparte si el equipo quiere que la hagamos nosotros.</p>
     </div>
   </div>
   <div class="grid2">
-    <div class="panel"><h3>Historias de gente</h3><p class="small">El podcast y sus derivados. Rostros, trayectorias, consejos. Es el 50% del contenido del grupo.</p><div class="tags"><span class="tag on">YouTube</span><span class="tag">Spotify</span><span class="tag">Reels</span><span class="tag">LinkedIn</span></div></div>
+    <div class="panel"><h3>Historias de gente</h3><p class="small">El podcast y sus derivados. Rostros, trayectorias, consejos. Es el <strong>50% del contenido del grupo</strong>.</p><div class="tags"><span class="tag on">YouTube</span><span class="tag">Spotify</span><span class="tag">Reels</span><span class="tag">LinkedIn</span></div></div>
     <div class="panel"><h3>Movimiento y región</h3><p class="small">Vaca Muerta, rutas, camiones, salones: lo que Arvor mueve cada día. Video documental corto, detrás de escena, timelapse.</p><div class="tags"><span class="tag on">YouTube</span><span class="tag">Instagram</span></div></div>
     <div class="panel"><h3>Educación útil</h3><p class="small">Cómo comprar un usado, cómo funciona un plan, qué pide un crédito. Explicado por quien lo hace, en 60 segundos.</p><div class="tags"><span class="tag on">Reels</span><span class="tag">Blog</span><span class="tag">Carruseles</span></div></div>
     <div class="panel"><h3>Cultura y talento</h3><p class="small">Empleos, crecimiento entre empresas, beneficios, día a día. Employer branding que también vende: la gente confía en empresas donde la gente quiere trabajar.</p><div class="tags"><span class="tag on">LinkedIn</span><span class="tag">Instagram</span></div></div>
@@ -807,7 +808,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
   <div>
     <div class="kicker">Quién hace qué</div>
     <h2>Nosotros producimos. Arvor aprueba y publica.</h2>
-    <p class="lead">Entregamos la pieza madre y las 12 piezas derivadas listas para salir. El equipo de marketing se concentra en lo que mejor hace: su gente, sus canales y su comunidad.</p>
+    <p class="lead">Entregamos <strong>la pieza madre y las 12 piezas derivadas listas para salir</strong>. El equipo de marketing se concentra en lo que mejor hace: su gente, sus canales y su comunidad.</p>
   </div>
   <div>
     <div class="grid2">
@@ -827,7 +828,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
           <li>Escenografía del set y espacio de grabación</li>
           <li>Conseguir y preparar invitados, empezando por el CEO</li>
           <li>Conducción del podcast: una persona más dos backups</li>
-          <li>Aprobación de las piezas: una persona, un plazo de 48 h</li>
+          <li>Aprobación de las piezas: <strong>una persona, un plazo de 48 h</strong></li>
           <li>Publicación de Reels, Shorts, LinkedIn y audio en Spotify; envío del newsletter</li>
           <li>Community management, respuestas y derivación de consultas</li>
           <li>Acceso de lectura a las estadísticas para el informe mensual</li>
@@ -848,7 +849,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
         <div class="pn">1</div>
         <div class="who">Nuestro equipo</div>
         <h3>Grabación</h3>
-        <p class="small">Jornada en el set de Arvor con nuestro equipo técnico. Se graban los 2 episodios del mes el mismo día.</p>
+        <p class="small">Jornada en el set de Arvor con nuestro equipo técnico. <strong>Se graban los 2 episodios del mes el mismo día.</strong></p>
         <div class="time">Día 0</div>
       </div>
       <div class="pipe-step us">
@@ -876,7 +877,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
         <div class="pn">5</div>
         <div class="who">Equipo Arvor</div>
         <h3>Publicación</h3>
-        <p class="small">Salen las piezas según el calendario: cada episodio alimenta dos semanas de contenido.</p>
+        <p class="small">Salen las piezas según el calendario: <strong>cada episodio alimenta dos semanas de contenido</strong>.</p>
         <div class="time">Semanas 1 y 2</div>
       </div>
     </div>
@@ -936,7 +937,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
       </div>
     </div>
     <div class="grid3" style="margin-top:1.2em">
-      <div class="panel amber"><h3>Informe mensual</h3><p class="small">Los cuatro bloques en un tablero, los 3 mejores y los 3 peores contenidos del mes, y qué cambiamos en base a eso.</p></div>
+      <div class="panel amber"><h3>Informe mensual</h3><p class="small">Los cuatro bloques en un tablero, los 3 mejores y los 3 peores contenidos del mes, y <strong>qué cambiamos en base a eso</strong>.</p></div>
       <div class="panel"><h3>Línea de base</h3><p class="small">Antes del primer episodio registramos el punto de partida de cada canal, para medir crecimiento real.</p></div>
       <div class="panel"><h3>Lo que necesitamos</h3><p class="small">Acceso de lectura a las estadísticas de cada canal, a Search Console y GA4, y un campo de origen en Salesforce.</p></div>
     </div>
@@ -952,7 +953,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
       <div class="panel plan"><h3>Modalidad esencial</h3>
         <p class="small muted">Pieza madre y herramientas</p>
         <div class="price"><span class="amt">$2.000.000</span><span class="per">por mes</span></div>
-        <p class="setup">Setup inicial: $1.150.000 (pago único)</p>
+        <p class="setup">Setup inicial: $900.000 (pago único)</p>
         <ul class="clean small">
           <li>Estrategia completa: arquitectura de marca, lineamientos y planes por marca</li>
           <li>2 episodios por mes con nuestro equipo técnico</li>
@@ -966,7 +967,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
         <div class="price"><span class="amt">$3.200.000</span><span class="per">por mes</span></div>
         <p class="setup">Setup inicial: <s class="strike">$600.000</s> <strong class="bonif">Bonificado</strong></p>
         <ul class="clean small">
-          <li>Todo lo de la esencial: nosotros editamos, su equipo no necesita herramientas ni capacitación</li>
+          <li>Todo lo de la esencial: <strong>nosotros editamos</strong>, su equipo no necesita herramientas ni capacitación</li>
           <li>8 clips por mes con subtítulos y copy, para Reels y Shorts</li>
           <li>2 piezas "Esta semana en Arvor" para LinkedIn</li>
           <li>2 audios listos para Spotify</li>
@@ -974,7 +975,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
           <li>2 notas publicadas en el blog, con palabras clave</li>
           <li>Todo entregado en Drive por episodio</li>
         </ul>
-        <p class="value">Por $1.200.000 más que la esencial, reciben 24 publicaciones listas por mes: $50.000 cada una.</p>
+        <p class="value">Por $1.200.000 más que la esencial, reciben <strong>24 publicaciones listas por mes</strong>: $50.000 cada una.</p>
       </div>
       <div class="panel plan"><h3>Por qué esta inversión rinde</h3>
         <ul class="clean small">
@@ -988,7 +989,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
       </div>
     </div>
     <div class="grid2" style="margin-top:1.2em">
-      <div class="panel"><h3>Condiciones</h3><p class="small">Valores en pesos argentinos. Pago a mes vencido, dentro de los primeros 10 días del mes siguiente. Baja con 30 días de aviso. Los episodios grabados se abonan completos. Ajuste trimestral por IPC. Paso a episodio semanal: esencial $3.000.000 y completa $5.000.000 por mes.</p></div>
+      <div class="panel"><h3>Condiciones</h3><p class="small">Valores en pesos argentinos. <strong>Pago a mes vencido</strong>, dentro de los primeros 10 días del mes siguiente. <strong>Baja con 30 días de aviso.</strong> Los episodios grabados se abonan completos. Ajuste trimestral por IPC. Paso a episodio semanal: esencial $3.000.000 y completa $5.000.000 por mes.</p></div>
       <div class="panel"><h3>Fuera de esta propuesta</h3><p class="small"><strong>A cargo de Arvor:</strong> escenografía, invitados, conducción, aprobación, publicación y community management. <strong>Se cotiza aparte:</strong> pauta publicitaria, cobertura de eventos, contenido propio por marca, exteriores y evento en vivo. <strong>Propuesta independiente:</strong> desarrollo y mantenimiento web de las marcas del grupo.</p></div>
     </div>
   </div>
@@ -999,7 +1000,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
   <div>
     <div class="kicker">Para arrancar</div>
     <h2>Lo que necesitamos de Arvor esta semana.</h2>
-    <p class="lead">Con estas cinco definiciones, en 30 días hay set montado y los primeros episodios grabados.</p>
+    <p class="lead">Con estas cinco definiciones, <strong>en 30 días hay set montado y los primeros episodios grabados</strong>.</p>
   </div>
   <div>
     <ol class="seq">
@@ -1011,7 +1012,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
     </ol>
     <div class="panel amber" style="margin-top:1.2em">
       <h3>Nuestra propuesta de arranque</h3>
-      <p class="small">Un piloto de 4 episodios en 2 meses, con todas las piezas derivadas entregadas y el sello aplicado en las 9 marcas. Cuando el equipo esté alineado, pasamos a un episodio por semana. Si hay que ajustar, lo hacemos con datos y no con opiniones.</p>
+      <p class="small"><strong>Un piloto de 4 episodios en 2 meses</strong>, con todas las piezas derivadas entregadas y el sello aplicado en las 9 marcas. Cuando el equipo esté alineado, pasamos a un episodio por semana. Si hay que ajustar, <strong>lo hacemos con datos y no con opiniones</strong>.</p>
     </div>
   </div>
 </section>
