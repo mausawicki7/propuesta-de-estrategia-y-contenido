@@ -285,6 +285,7 @@ td.c{text-align:center}
 }
 .gate[hidden]{display:none}
 .gate-card{width:min(420px,100%);text-align:left}
+.gate .logo{width:clamp(140px,16vw,200px);margin-bottom:2em}
 .gate-kicker{color:var(--amber);font-weight:600;font-size:.9em;margin-bottom:.6em}
 .gate h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.05;margin-bottom:.4em}
 .gate-sub{color:var(--ice);margin-bottom:1.6em}
@@ -305,7 +306,6 @@ td.c{text-align:center}
 .gate button:focus-visible{outline:2px solid var(--white);outline-offset:2px}
 .gate-err{color:var(--amber);font-size:.9em;margin-top:1em}
 .gate-err[hidden]{display:none}
-.gate-foot{color:var(--steel);font-size:.84em;margin-top:2.2em;border-top:1px solid var(--line);padding-top:1em}
 .gate.shake .gate-card{animation:gshake .32s}
 @keyframes gshake{
   0%,100%{transform:translateX(0)}
@@ -320,6 +320,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
 <!-- Puerta de cortesía: PIN de acceso -->
 <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
   <div class="gate-card">
+    <img class="logo" src="data:image/png;base64,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" alt="Grupo Arvor">
     <p class="gate-kicker">Documento privado</p>
     <h1 id="gateTitle">Acceso restringido</h1>
     <p class="gate-sub">Preparamos esta propuesta especialmente para el equipo de Grupo Arvor. Ingresá el PIN que te compartimos para verla.</p>
@@ -329,7 +330,6 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
       <button type="submit">Entrar</button>
     </form>
     <p class="gate-err" id="gateErr" role="alert" hidden>PIN incorrecto. Probá de nuevo.</p>
-    <p class="gate-foot">¿No tenés el PIN? Escribime a <a href="mailto:mau.sawicki@gmail.com">mau.sawicki@gmail.com</a>.</p>
   </div>
 </div>
 <script>
@@ -842,7 +842,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
         </ul>
       </div>
     </div>
-    <div class="panel" style="margin-top:1.2em"><h3>Herramientas</h3><p class="small">Calendario editorial compartido, carpeta de entregas en Drive organizada por episodio y canal, grupo de WhatsApp para coordinación y una reunión mensual de seguimiento.</p></div>
+    <div class="panel" style="margin-top:1.2em"><h3>Herramientas</h3><p class="small">Carpeta de entregas en Drive organizada por episodio y canal, grupo de WhatsApp para coordinación y una reunión mensual de seguimiento.</p></div>
   </div>
 </section>
 
@@ -884,7 +884,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
         <div class="pn">5</div>
         <div class="who">Equipo Arvor</div>
         <h3>Publicación</h3>
-        <p class="small">Salen las piezas según el calendario: <strong>cada episodio alimenta dos semanas de contenido</strong>.</p>
+        <p class="small">Salen las piezas: <strong>cada episodio alimenta dos semanas de contenido</strong>.</p>
         <div class="time">Semanas 1 y 2</div>
       </div>
     </div>
@@ -992,7 +992,7 @@ body.locked .deck,body.locked .foot,body.locked .bar,body.locked .toc{visibility
           <li><strong>Sin permanencia.</strong> Trabajo mes a mes: la calidad es la que sostiene la relación, no un contrato</li>
           <li><strong>Precio final.</strong> Factura C, sin IVA agregado sobre el monto</li>
           <li><strong>Equipo técnico incluido.</strong> Cámaras Sony, iluminación Godox, drone y micrófonos DJI sin costo de alquiler</li>
-          <li><strong>Nunca se quedan sin contenido.</strong> En la completa, cada episodio alimenta dos semanas en cuatro canales; con 2 episodios por mes, el calendario está cubierto los 30 días</li>
+          <li><strong>Nunca se quedan sin contenido.</strong> En la completa, cada episodio alimenta dos semanas en cuatro canales; con 2 episodios por mes, hay publicaciones los 30 días</li>
           <li><strong>Un activo que queda.</strong> Cada episodio sigue sumando vistas y búsquedas meses después de publicado</li>
           <li><strong>Menos carga interna.</strong> En la completa, marketing aprueba y publica; no edita</li>
         </ul>
